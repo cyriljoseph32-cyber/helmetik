@@ -1,7 +1,7 @@
 import { Cta } from "@/components/ui/Cta";
 import { Container, Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
-import { Mascot } from "@/components/brand/Mascot";
+import { BrandMark } from "@/components/brand/BrandMark";
 import { href } from "@/i18n/routes";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/types";
@@ -18,10 +18,10 @@ export function HostBlock({
       <Container>
         <Reveal className="relative overflow-hidden rounded-lg border border-marine-line bg-marine/30 p-8 sm:p-12">
           <div
-            className="pointer-events-none absolute -right-10 -top-10 opacity-10"
+            className="pointer-events-none absolute -right-8 -top-8 opacity-15"
             aria-hidden
           >
-            <Mascot className="h-56 w-56 text-uv" accent="none" />
+            <BrandMark height={190} />
           </div>
           <div className="relative max-w-2xl">
             <h2 className="font-display text-3xl font-bold text-clinical sm:text-4xl">

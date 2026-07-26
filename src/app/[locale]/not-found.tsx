@@ -6,7 +6,7 @@ import { defaultLocale, isLocale } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n";
 import { href } from "@/i18n/routes";
-import { Mascot } from "@/components/brand/Mascot";
+import { BrandMark } from "@/components/brand/BrandMark";
 import { Container } from "@/components/ui/Section";
 
 /**
@@ -22,7 +22,7 @@ export default function NotFound() {
 
   return (
     <Container className="flex min-h-[70vh] flex-col items-center justify-center py-20 text-center">
-      <Mascot className="h-24 w-24 text-uv/70" />
+      <BrandMark height={104} />
       <p className="tnum mt-8 font-display text-7xl font-extrabold text-clinical">
         {dict.notFound.code}
       </p>
@@ -33,7 +33,7 @@ export default function NotFound() {
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <Link
           href={href(locale, "locations")}
-          className="inline-flex min-h-[44px] items-center justify-center rounded-md bg-lime px-6 font-semibold text-ink transition-colors hover:bg-lime-deep"
+          className="inline-flex min-h-[44px] items-center justify-center rounded-md bg-signal px-6 font-semibold text-ink transition-colors hover:bg-signal-deep"
         >
           {dict.notFound.findMachine}
         </Link>

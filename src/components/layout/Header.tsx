@@ -108,7 +108,7 @@ export function Header({
           <Link
             href={href(locale, "locations")}
             aria-label={dict.common.findNearest}
-            className="flex h-11 w-11 items-center justify-center rounded-md bg-lime text-ink transition-colors hover:bg-lime-deep lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-md bg-signal text-ink transition-colors hover:bg-signal-deep lg:hidden"
           >
             <PinIcon />
           </Link>

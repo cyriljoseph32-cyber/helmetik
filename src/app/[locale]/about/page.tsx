@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 import { Container, Section, Kicker } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { PageHeader } from "@/components/content/PageHeader";
-import { Mascot } from "@/components/brand/Mascot";
+import { BrandMark } from "@/components/brand/BrandMark";
 
 export async function generateMetadata({
   params,
@@ -65,7 +65,7 @@ export default async function AboutPage({
             {/* Editorial slot — real founder/team photo goes here, no fake portrait */}
             <Reveal delay={100}>
               <div className="flex aspect-[4/5] flex-col items-center justify-center rounded-lg border border-dashed border-marine-line bg-ink-2 p-8 text-center">
-                <Mascot className="h-20 w-20 text-uv/60" accent="none" />
+                <BrandMark height={88} />
                 <p className="mt-6 text-sm font-semibold text-clinical">
                   {dict.about.teamHeading}
                 </p>

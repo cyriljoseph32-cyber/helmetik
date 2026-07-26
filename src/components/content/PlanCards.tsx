@@ -82,7 +82,7 @@ function CheckIcon() {
       height="18"
       viewBox="0 0 24 24"
       fill="none"
-      className="mt-0.5 shrink-0 text-lime"
+      className="mt-0.5 shrink-0 text-signal"
       aria-hidden
     >
       <path

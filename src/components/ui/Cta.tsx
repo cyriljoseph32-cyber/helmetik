@@ -7,9 +7,9 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-md font-semibold leading-none transition-[transform,background-color,border-color,color] duration-200 min-h-[44px] px-5 focus-visible:outline-2 active:translate-y-px disabled:opacity-60 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
-  // Primary action — electric lime, reserved for the key conversion.
+  // Primary action — electric signal, reserved for the key conversion.
   primary:
-    "bg-lime text-ink hover:bg-lime-deep shadow-[0_0_0_1px_rgba(200,242,74,0.4)]",
+    "bg-signal text-ink hover:bg-signal-deep shadow-[0_0_0_1px_rgba(246,139,70,0.45)]",
   // Secondary — outlined on ink.
   secondary:
     "border border-marine-line bg-transparent text-clinical hover:border-uv hover:text-uv",

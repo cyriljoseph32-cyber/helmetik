@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { mascotDataUri } from "@/lib/mascot-svg";
+import { brandMarkDataUri } from "@/lib/brand-mark";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
@@ -17,7 +17,7 @@ export default function AppleIcon() {
           background: "#08131f",
         }}
       >
-        <img src={mascotDataUri({ size: 128 })} width={128} height={128} alt="" />
+        <img src={brandMarkDataUri} width={150} height={101} alt="" />
       </div>
     ),
     { ...size },
