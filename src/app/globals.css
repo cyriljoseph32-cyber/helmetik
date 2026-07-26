@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* ============================================================
+   HELMETIK design system
+   Deep marine ink base · clinical white · cement grey ·
+   luminous UV cyan (signal, sparing) · electric lime (CTA only)
+   ============================================================ */
+
+@theme {
+  /* Base neutrals */
+  --color-ink: #08131f; /* deepest base (page background) */
+  --color-ink-2: #0c1c2b; /* raised ink panel */
+  --color-marine: #12293d; /* marine surface */
+  --color-marine-line: #21405b; /* hairline on marine panels */
+  --color-cement: #8a97a6; /* cement grey text/surface */
+  --color-cement-2: #b8c2cd;
+  --color-clinical: #f5f8fb; /* clinical white */
+  --color-clinical-2: #e6edf3;
+
+  /* Signals */
+  --color-uv: #35e0ff; /* UV cyan — technology signal, used sparingly */
+  --color-uv-deep: #0bb8dc;
+  --color-lime: #c8f24a; /* electric lime — reserved for primary CTAs */
+  --color-lime-deep: #a7d321;
+
+  /* Feedback */
+  --color-danger: #ff6b57;
+  --color-success: #57e39a;
+
+  /* Fonts (wired from next/font variables) */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-sans), sans-serif;
+  --font-thai: var(--font-thai), var(--font-sans), sans-serif;
+
+  /* Radii — intentionally tight/technical, not the over-rounded template look */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  /* Easing */
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-clinical);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tabular figures for anything numeric that must align (prices, minutes, temps) */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "cv01" 1;
+  letter-spacing: -0.01em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Locale-scoped Thai typography */
+[lang="th"] body,
+.lang-th {
+  font-family: var(--font-thai);
+}
+[lang="th"] .font-display,
+.lang-th .font-display {
+  font-family: var(--font-thai);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* Accessible focus ring — always visible on keyboard nav */
+:focus-visible {
+  outline: 2px solid var(--color-uv);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-uv);
+  color: var(--color-ink);
+}
+
+/* Utility: fine hairline used on technical panels */
+.hairline {
+  border: 1px solid color-mix(in oklab, var(--color-uv) 14%, transparent);
+}
+
+/* Grid texture used behind hero / technical sections */
+.tech-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-uv) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-uv) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 44px 44px;
+}
+
+/* Scroll-reveal — progressive enhancement, safe without JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s var(--ease-out-quint),
+    transform 0.7s var(--ease-out-quint);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-lime);
+  color: var(--color-ink);
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-md) 0;
+}
+.skip-link:focus {
+  left: 0;
+}
