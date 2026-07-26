@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Cta } from "@/components/ui/Cta";
 import { Container } from "@/components/ui/Section";
 import { CycleAnimation } from "@/components/cycle/CycleAnimation";
@@ -10,7 +11,19 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <section className="relative overflow-hidden border-b border-marine-line">
       {/* Technical grid + UV glow backdrop */}
-      <div className="pointer-events-none absolute inset-0 tech-grid opacity-60" aria-hidden />
+      {/* Real Helmetik machine — subtle backdrop */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <Image
+          src="/brand/machine-bg.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-right opacity-20 [mask-image:linear-gradient(to_right,transparent,black_75%)]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-transparent" />
+      </div>
+      <div className="pointer-events-none absolute inset-0 tech-grid opacity-40" aria-hidden />
       <div
         className="pointer-events-none absolute -top-32 right-0 h-[420px] w-[420px] rounded-full bg-uv/10 blur-[120px]"
         aria-hidden
