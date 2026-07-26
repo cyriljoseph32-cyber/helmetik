@@ -49,7 +49,7 @@ export function ComparisonTable({ dict }: { dict: Dictionary }) {
                       {plan.minutes} {dict.common.minutesShort}
                     </span>
                   ) : plan.features[feature] ? (
-                    <span className="inline-flex text-lime" aria-label={dict.common.included}>
+                    <span className="inline-flex text-signal" aria-label={dict.common.included}>
                       <CheckIcon />
                     </span>
                   ) : (

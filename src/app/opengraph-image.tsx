@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { mascotDataUri } from "@/lib/mascot-svg";
+import { brandMarkDataUri } from "@/lib/brand-mark";
 import { site } from "@/content/site";
 import { startingPrice, currency } from "@/content/pricing";
 
@@ -25,9 +25,9 @@ export default function OpengraphImage() {
       >
         {/* top row: logo lockup */}
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <img src={mascotDataUri({ size: 72 })} width={72} height={72} alt="" />
+          <img src={brandMarkDataUri} width={104} height={70} alt="" />
           <div style={{ display: "flex", fontSize: 40, fontWeight: 800, color: "#f5f8fb", letterSpacing: -1 }}>
-            HELMET<span style={{ color: "#35e0ff" }}>IK</span>
+            HELMET<span style={{ color: "#f68b46" }}>IK</span>
           </div>
         </div>
 

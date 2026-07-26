@@ -83,8 +83,11 @@ None of the below are invented — each is a clearly-marked placeholder ready to
 4. **UV / germ claim proof** — a lab test / manufacturer sheet is required before
    any "% of germs" figure; the FAQ + How-It-Works currently state only the
    defensible "UV-C disinfection cycle + 3D foam treatment".
-5. **HD photography + the original monkey mascot** — a crafted vector mascot
-   (`src/components/brand/Mascot.tsx`) stands in; replace with real assets.
+5. **HD photography** — the real monkey mascot logo is now integrated
+   (`public/brand/helmetik-mark.png`, extracted from the official logo and used
+   site-wide via `src/components/brand/BrandMark.tsx`); still needs real
+   machine/helmet/foam photos for the hero and editorial slots. A crisp
+   vector/SVG of the logo would also be ideal for future scaling.
 6. **Social accounts** — add URLs in `site.ts` (`social`); footer slots stay
    hidden until then.
 7. **Accepted payment methods** — confirm and flip `paymentMethods.confirmed`

@@ -1,10 +1,10 @@
 import { ImageResponse } from "next/og";
-import { mascotDataUri } from "@/lib/mascot-svg";
+import { brandMarkDataUri } from "@/lib/brand-mark";
 
 export const size = { width: 512, height: 512 };
 export const contentType = "image/png";
 
-/** Favicon / app icon: the mascot mark on the ink base. */
+/** Favicon / app icon: the real Helmetik mascot on the ink base. */
 export default function Icon() {
   return new ImageResponse(
     (
@@ -19,7 +19,7 @@ export default function Icon() {
           borderRadius: 96,
         }}
       >
-        <img src={mascotDataUri({ size: 360 })} width={360} height={360} alt="" />
+        <img src={brandMarkDataUri} width={440} height={297} alt="" />
       </div>
     ),
     { ...size },

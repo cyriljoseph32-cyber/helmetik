@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Mascot } from "@/components/brand/Mascot";
+import { BrandMark } from "@/components/brand/BrandMark";
 import { heroCycleSteps } from "@/content/cycle";
 import type { Dictionary } from "@/i18n/types";
 
@@ -84,7 +84,7 @@ export function CycleAnimation({ dict }: { dict: Dictionary }) {
 
         {/* Chamber core */}
         <div className="absolute inset-6 flex flex-col items-center justify-center rounded-full bg-ink-2 hairline">
-          <Mascot className="h-16 w-16 text-clinical" />
+          <BrandMark height={58} />
           <div className="mt-2 tnum text-3xl font-extrabold text-clinical">
             5:00
           </div>

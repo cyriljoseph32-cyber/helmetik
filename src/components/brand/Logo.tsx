@@ -1,6 +1,6 @@
-import { Mascot } from "./Mascot";
+import { BrandMark } from "./BrandMark";
 
-/** Full Helmetik wordmark lockup: mascot + name. */
+/** Full Helmetik wordmark lockup: real mascot mark + name. */
 export function Logo({
   className = "",
   showText = true,
@@ -10,11 +10,11 @@ export function Logo({
 }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <Mascot className="h-8 w-8 shrink-0 text-clinical" />
+      <BrandMark height={38} className="shrink-0" priority />
       {showText && (
         <span className="font-display text-[1.35rem] font-extrabold leading-none tracking-tight text-clinical">
           HELMET
-          <span className="text-uv">IK</span>
+          <span className="text-signal">IK</span>
         </span>
       )}
     </span>

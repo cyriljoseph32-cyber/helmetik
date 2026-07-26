@@ -2,8 +2,8 @@
 
 /* ============================================================
    HELMETIK design system
-   Deep marine ink base · clinical white · cement grey ·
-   luminous UV cyan (signal, sparing) · electric lime (CTA only)
+   Deep navy ink base · clinical white · cement grey · logo teal/UV cyan
+   (tech signal, sparing) · brand orange (CTAs) · cream — from the Helmetik logo
    ============================================================ */
 
 @theme {
@@ -17,11 +17,13 @@
   --color-clinical: #f5f8fb; /* clinical white */
   --color-clinical-2: #e6edf3;
 
-  /* Signals */
-  --color-uv: #35e0ff; /* UV cyan — technology signal, used sparingly */
+  /* Signals — sourced from the official Helmetik logo */
+  --color-uv: #35e0ff; /* UV cyan / teal visor trim — technology signal, sparing */
   --color-uv-deep: #0bb8dc;
-  --color-lime: #c8f24a; /* electric lime — reserved for primary CTAs */
-  --color-lime-deep: #a7d321;
+  --color-signal: #f68b46; /* brand orange (mascot face) — reserved for primary CTAs */
+  --color-signal-deep: #e0752f;
+  --color-cream: #f3d9a6; /* logo ear cream — warm tertiary accent */
+  --color-navy: #022e49; /* logo deep navy */
 
   /* Feedback */
   --color-danger: #ff6b57;
@@ -149,7 +151,7 @@ body {
   left: -9999px;
   top: 0;
   z-index: 100;
-  background: var(--color-lime);
+  background: var(--color-signal);
   color: var(--color-ink);
   padding: 0.75rem 1rem;
   font-weight: 600;

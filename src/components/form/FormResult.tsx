@@ -41,7 +41,7 @@ export function FormResult({
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-lime px-6 font-semibold text-ink transition-colors hover:bg-lime-deep"
+            className="mt-5 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-signal px-6 font-semibold text-ink transition-colors hover:bg-signal-deep"
           >
             {dict.form.orWhatsapp}
           </a>
